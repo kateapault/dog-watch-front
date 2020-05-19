@@ -1,15 +1,35 @@
 import React from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { FlatList, View, Text, Button, StyleSheet } from 'react-native'
+
+import EventTile from '../components/EventTile'
 
 const AddEventsScreen = props => {
+    // const renderGridItem = () => {
+
+    // }
+
+    const eventsNav = () => props.navigation.navigate({
+        routeName: 'AddEventDetail'
+    })
     return(
-        <View>
-            <Text>Add events!</Text>
-            <Button title="Add this event" onPress={()=>props.navigation.navigate({routeName:'AddEventDetail'})}></Button>
+        <View style={styles.screen}>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
+            <EventTile eventsNavigation={eventsNav}/>
         </View>
     );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    screen:{
+        flex:1,
+        flexWrap: 'wrap',
+    }
+});
 
 export default AddEventsScreen;

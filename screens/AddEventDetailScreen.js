@@ -1,10 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, Button, StyleSheet } from 'react-native'
 
 const AddEventDetailScreen = props => {
     return(
         <View>
-            <Text>Add this specific event!</Text>
+            <Text>Add EVENT NAME</Text>
+            <Button title="ADD" onPress={()=>{console.log("EVENT ADDED")}}></Button>
         </View>
     );
 };
