@@ -3,7 +3,7 @@ import { TouchableOpacity, View, Text, Button, StyleSheet } from 'react-native';
 
 const QuickAddButton = props => {
     return(
-        <TouchableOpacity style={styles.button} onPress={()=>{console.log('add button pressed')}}>
+        <TouchableOpacity style={styles.button} onPress={props.eventsNavigation}>
             <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
     )

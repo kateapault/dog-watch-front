@@ -4,10 +4,15 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 import DogQuickLook from '../components/DogQuickLook'
 
 const HomeScreen = props => {
+    const eventsNavigation = () => props.navigation.navigate({
+        routeName: 'AddEvents'
+    })
+
+
     return(
         <View style={styles.screen}>
-            <DogQuickLook />
-            <DogQuickLook />
+            <DogQuickLook eventsNavigation={eventsNavigation} />
+            <DogQuickLook eventsNavigation={eventsNavigation}/>
         </View>
     )
 };

@@ -7,7 +7,7 @@ import QuickLookInfo from './QuickLookInfo'
 const DogQuickLook = props => {
     return(
         <View style={styles.container}>
-            <QuickAddButton />
+            <QuickAddButton eventsNavigation={props.eventsNavigation}/>
             <TouchableOpacity style={styles.container} onPress={()=>{console.log('quick look button pressed')}}>
                 <Text style={styles.image}>Image here</Text>
                 <QuickLookInfo />

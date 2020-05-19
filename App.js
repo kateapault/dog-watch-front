@@ -5,10 +5,7 @@ import AddEventNavigator from './navigation/AddEventNavigator'
 
 export default function App() {
   return (
-    <View style={styles.container}>
       <AddEventNavigator />
-    </View>
-    
   );
 }
 
